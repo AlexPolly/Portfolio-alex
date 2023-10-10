@@ -1,24 +1,29 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import About from './Components/About';
+import Contact from './Components/Contact';
+import Edu from './Components/Edu';
+import Project from './Components/Project';
+import Skill from './Components/Skill';
+import NavBar from './Components/Navbar';
 
 function App() {
+  const [isDarkMode, setDarkMode] = useState(false)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <> 
+    <div className={isDarkMode?`darkmode`:`lightmode`}>
+      <NavBar  isDarkMode={isDarkMode} setDarkMode={setDarkMode}/><hr />
+      <About isDarkMode={isDarkMode}  />
+      <hr />
+      <Skill isDarkMode={isDarkMode}/>
+      <hr />
+      <Edu isDarkMode={isDarkMode}/>
+      <hr />
+      <Project isDarkMode={isDarkMode}/>
+      <hr />
+      <Contact isDarkMode={isDarkMode}/>
     </div>
+    </>
   );
 }
 

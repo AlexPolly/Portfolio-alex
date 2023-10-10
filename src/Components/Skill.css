@@ -1,0 +1,28 @@
+.shead{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    font-family: 'Young Serif', serif;}
+.sbody{
+    display: grid;
+    margin-top: 50px;
+    margin-bottom: 70px;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-gap: 80px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.icon-c{
+   border: 2px solid;
+   border-radius: 50px 20px;
+   
+   padding: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.icon-c:hover{
+    background-color: rgba(0, 255, 255, 0.205);
+    box-shadow: 5px 5px;
+}
